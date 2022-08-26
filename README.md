@@ -41,7 +41,7 @@ The datase exists as a CSV file containing more than 34,000 organizations that h
 
 * Description of the stages of the deep learning process
 
-     ## Prepare the Data for Use on a Neural Network Model 
+     * Prepare the Data for Use on a Neural Network Model 
 
 1. Read in the CSV file from the Resources folder into a Pandas DataFrame
 2. Review the DataFrame, look for categorical variables that require encoding, as well as columns that could eventually define your features and target variables.
@@ -51,14 +51,14 @@ The datase exists as a CSV file containing more than 34,000 organizations that h
 6. Split the features and target sets into training and testing datasets.
 7. Use scikit-learn's (StandardScaler) to scale the features data.
 
-    ## Compile and Evaluate a Binary Classification Model Using a Neural Network
+    * Compile and Evaluate a Binary Classification Model Using a Neural Network
 
 1. Assign the number of input features, the number of layers, and the number of neurons on each layer using Tensorflow’s Keras
 2. Compile and fit the model using the binary_crossentropy loss function, the adam optimizer, and the accuracy evaluation metric.
 3. Evaluate the model using the test data to determine the model’s loss and accuracy.
 4. Save and export your model as a HDF5 file under finished files, name the file AlphabetSoup.h5.
 
-    ## Optimize the Neural Network Model
+    * Optimize the Neural Network Model
 
 1. Define at least two new deep neural network models
 2. After finishing your models, display the accuracy scores achieved by each model, and compare the results. 
