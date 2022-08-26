@@ -27,6 +27,7 @@ Install the following dependencies an dmocdules from the libraries above
 
 ```
 
+
 ## Overview of the analysis
 
 * Purpose of the analysis
@@ -40,7 +41,7 @@ The datase exists as a CSV file containing more than 34,000 organizations that h
 
 * Description of the stages of the deep learning process
 
-    * Prepare the Data for Use on a Neural Network Model 
+     ## Prepare the Data for Use on a Neural Network Model 
 
 1. Read in the CSV file from the Resources folder into a Pandas DataFrame
 2. Review the DataFrame, look for categorical variables that require encoding, as well as columns that could eventually define your features and target variables.
@@ -50,14 +51,14 @@ The datase exists as a CSV file containing more than 34,000 organizations that h
 6. Split the features and target sets into training and testing datasets.
 7. Use scikit-learn's (StandardScaler) to scale the features data.
 
-    * Compile and Evaluate a Binary Classification Model Using a Neural Network
+    ## Compile and Evaluate a Binary Classification Model Using a Neural Network
 
 1. Assign the number of input features, the number of layers, and the number of neurons on each layer using Tensorflow’s Keras
 2. Compile and fit the model using the binary_crossentropy loss function, the adam optimizer, and the accuracy evaluation metric.
 3. Evaluate the model using the test data to determine the model’s loss and accuracy.
 4. Save and export your model as a HDF5 file under finished files, name the file AlphabetSoup.h5.
 
-    * Optimize the Neural Network Model
+    ## Optimize the Neural Network Model
 
 1. Define at least two new deep neural network models
 2. After finishing your models, display the accuracy scores achieved by each model, and compare the results. 
@@ -66,25 +67,26 @@ The datase exists as a CSV file containing more than 34,000 organizations that h
 ## Results
     *  Original model's results
 
-Loss: 0.5537083148956299, Accuracy: 0.7309620976448059
+   Loss: 0.5537083148956299, Accuracy: 0.7309620976448059
 
     *   Alternative Model 1 results
 
-Loss: 0.5619542002677917, Accuracy: 0.7297959327697754
+   Loss: 0.5619542002677917, Accuracy: 0.7297959327697754
 
     *   Alternative Model 2 Results
 
-Loss: 0.7570863366127014, Accuracy: 0.5280466675758362
+   Loss: 0.7570863366127014, Accuracy: 0.5280466675758362
+ 
 ---
 
 ## Summary
 Optimization of the model was tested by using different number of hidden layers for two of the models, and different epochs for two of the models.
 
     * Number of layers
-The original model and Alternative one model use different number of hidden layers, with the original having 2 layers, while the alternative has one layer. With different number of hidden layers, the models reflect a very small difference in both their loss and accuarcy values, with loss being (o.5537 vs 0.5609) and accuracy being (0.7310 vs 0.7298). This is proof that adding more layers is not a guarantee for better performance, hence the reason why Trial and error is the only way to determine how “deep” a deep learning model should be.
+The original model and Alternative one model display different number of hidden layers, with the original having 2 layers, while the alternative has one layer. With different number of hidden layers, the models reflect a very small difference in both their loss and accuarcy, wih loss being (o.5537 vs 0.5609) and accuracy being (0.7310 vs 0.7298). This is proof that adding more layers is not a guarantee for better performance, hence the reason why Trial and error is the only way to determine how “deep” a deep learning model should be.
 
     * Number of Epochs
-The original model and Alternative two model use similar number of hidden layers(2), but employ different number of epochs with the original having 50 epochs, and Alt 2 model having 70 epochs. The models reflects a huge difference in both their loss (0.5537 vs 0.7571), and their accuracy (0.7310 vs 0.5280). It is clear the model’s training loss increases over the epochs as seen in Alt 2, where loss went up from 0.5537 to 0.7571, and  accuracy (for classification) decreased from 0.7310 to 0.5280.
+The original model and Alternative two model display similar number of hidden layers(2), but have different number of epochs, with the original having 50, and alt 2 having 70. The models reflect a huge difference in both their loss (0.5537 vs 0.7571) and their accuracy (0.7310 vs 0.5280).
 
 
 ## License
